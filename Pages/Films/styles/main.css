@@ -1,0 +1,1123 @@
+@charset "UTF-8";
+.hace:checked + .hace-content::before {
+  content: "";
+  width: 56px;
+  height: 56px;
+  background-image: url("../../../Images/Layer_7_copy.svg");
+}
+
+.hace {
+  display: none;
+}
+
+.hace-content {
+  cursor: pointer;
+}
+
+.hace-content::before {
+  content: "";
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  display: block;
+  background-image: url("../../../Images/Group.svg");
+}
+
+.pleer {
+  z-index: 999;
+  position: fixed;
+  background: white;
+  bottom: 0;
+  width: 100%;
+}
+.pleer_song-name {
+  color: black;
+}
+.pleer__video {
+  display: none;
+  position: absolute;
+  top: 0;
+  max-width: 100%;
+}
+.pleer__open-full-screen {
+  cursor: pointer;
+}
+.pleer_panel-start {
+  padding: 0 16px;
+}
+.pleer_like-btn {
+  cursor: pointer;
+  margin-right: 18px;
+}
+.pleer_like-btn div {
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.pleer_like-btn > input:checked + div::after {
+  background-image: url("../../../Images/active-heart.svg");
+}
+.pleer_like-btn > div::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 32px;
+  background-image: url("../../../Images/heart.svg");
+}
+.pleer_song-name {
+  font-size: 24px;
+}
+.pleer__author-info {
+  flex: 1 0 auto;
+  margin-right: 18px;
+  padding-right: 20px;
+}
+.pleer_song-author {
+  font-size: 18px;
+  color: #ae3fbd;
+}
+.pleer__progress-bar {
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  height: 24px;
+  background: #7D7D7D;
+}
+.pleer__progress-bar p {
+  opacity: 0;
+  color: white;
+  position: relative;
+  left: 14px;
+  z-index: 999;
+}
+.pleer__progress-bar p:hover {
+  opacity: 1;
+}
+.pleer__progress-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ae3fbd;
+  width: 30%;
+  height: 100%;
+}
+.pleer__content {
+  padding: 0 60px 0 60px;
+  margin-bottom: 16px;
+  max-height: 128px;
+  display: flex;
+}
+.pleer__control-panel {
+  margin-right: 26px;
+  display: flex;
+  align-items: center;
+}
+.pleer__song-info {
+  display: flex;
+}
+.pleer__song-photo img {
+  margin: 0 18px 0 0;
+  max-width: 85px;
+  min-height: 90px;
+  border-radius: 10px;
+}
+.pleer__song-info {
+  display: flex;
+  align-items: center;
+}
+
+.pleer__full {
+  position: relative;
+}
+.pleer__full .pleer__wrapper {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+}
+.pleer__full .pleer__contenter {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  max-width: 797px;
+  background: white;
+  margin: 0 auto;
+}
+.pleer__full .pleer__song-photo {
+  display: none;
+  z-index: 300;
+}
+.pleer__full .pleer__open-full-screen {
+  display: none;
+}
+.pleer__full .pleer__progress-bar {
+  position: absolute;
+  width: 100%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pleer__full .pleer__video {
+  display: block;
+  position: fixed;
+  top: 0;
+}
+.pleer__full .pleer__content {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 10px;
+  background: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 731px;
+}
+.pleer__full .pleer__hidden-album {
+  height: 100%;
+}
+.pleer__full .pleer__hidden-album img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 60vh;
+}
+
+.af {
+  flex: 1 0 auto;
+}
+
+main {
+  padding-bottom: 160px;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+.film-player__rating, .songs-list__song-name, .album-list__album-name {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.expand, .about__paragraph, .album__name p, .subscribe__paragraph, .songs-list__author-name, .album-list__album-author, .album-list__listen-btn {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.Container {
+  max-width: 1584px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  color: white;
+}
+
+li {
+  color: inherit;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #15133C;
+  padding: 32px 0;
+}
+.header__form.hidden {
+  display: none;
+}
+.header_light {
+  background-color: #FFF;
+  color: black;
+}
+.header__close-found-input {
+  font-size: 23px;
+  color: white;
+  right: 0;
+  position: absolute;
+}
+.header__form-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.header__form-control label {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.header__found-input {
+  margin-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  height: 100%;
+  min-height: 30px;
+  background: inherit;
+  border: transparent;
+  outline: none;
+  color: white;
+}
+.header__found-input::before {
+  content: "ЛУПА";
+}
+.header__content {
+  max-width: 1580px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.header__nav {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+}
+.header__nav li {
+  margin-right: 26px;
+}
+.header__nav li:last-child {
+  margin: 0;
+}
+.header__found {
+  margin-right: 48px;
+}
+.header__profile {
+  display: flex;
+  align-items: center;
+}
+.header__profile a {
+  display: flex;
+  align-items: center;
+}
+.header__avatar {
+  margin-right: 26px;
+}
+.header__user-name {
+  display: flex;
+}
+.header__logo {
+  flex: 1 0 auto;
+}
+
+main {
+  flex: 1 0 auto;
+  background: #110F27;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.album-list {
+  overflow: hidden;
+}
+.album-list__container {
+  padding: 0 10px;
+  display: flex;
+  width: 114%;
+  flex-wrap: wrap;
+  margin: 0 -7%;
+}
+.album-list__listen-btn {
+  display: flex;
+  align-items: center;
+}
+.album-list__album-name {
+  padding-top: 50px;
+  text-align: center;
+  margin: 0 0 12px 0;
+}
+.album-list__album-author {
+  text-align: center;
+  color: #C4C4C4;
+  margin-bottom: 10px;
+}
+.album-list__btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.album-list__btn-wrapper svg {
+  margin-right: 10px;
+}
+.album-list__album-item {
+  position: relative;
+  border-radius: 10px;
+  max-height: 248px;
+  cursor: pointer;
+  margin: 0 7%;
+  width: 19.3333333333%;
+  margin-bottom: 100px;
+}
+.album-list__album-item:hover .album-list__album-info {
+  opacity: 1;
+  transition: 0.3s opacity linear;
+}
+.album-list__album-item img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 248px;
+}
+.album-list__album-info {
+  transition: 0.3s opacity linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.album-list__album-info svg {
+  fill: white;
+}
+.album-list__album-info button {
+  color: white;
+}
+
+.songs-list__song-item {
+  margin-bottom: 30px;
+  padding-right: 10px;
+  align-items: center;
+  display: flex;
+  background: rgba(217, 217, 217, 0.2);
+}
+.songs-list__song-info {
+  align-items: center;
+  display: flex;
+  flex: 1 0 auto;
+}
+.songs-list__last-block svg {
+  margin-right: 14px;
+}
+.songs-list__body {
+  max-height: 78px;
+}
+.songs-list__album-photo {
+  margin-right: 14px;
+  max-height: 78px;
+}
+.songs-list__album-photo img {
+  max-height: inherit;
+}
+.songs-list__play {
+  margin-right: 30px;
+}
+.songs-list__author-name {
+  color: #C4C4C4;
+}
+
+.main-input {
+  position: relative;
+}
+.main-input_dark input:focus + p {
+  color: black;
+}
+.main-input__label {
+  left: 6px;
+  color: white;
+  position: absolute;
+  top: 0;
+  transition: 0.3s top linear;
+}
+.main-input__label.main-input__label_fixed {
+  top: -50%;
+}
+.main-input__input {
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-bottom: 3px solid #2B4376;
+  outline: none;
+  background: #1B2A4A;
+  width: 100%;
+  min-width: 300px;
+  height: 50px;
+}
+.main-input__input:focus {
+  background: #2B4376;
+}
+.main-input__input:focus + p {
+  top: -50%;
+  transition: 0.2s top linear;
+}
+
+.item-subscribe__btn-buy, .review__submit, .film-player__start-btn, .offer__link, .test {
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 6px 25px;
+  font-size: 22px;
+  color: white;
+  background: transparent;
+  border: 2px solid #D53075;
+}
+.item-subscribe__btn-buy:hover, .review__submit:hover, .film-player__start-btn:hover, .offer__link:hover, .test:hover {
+  background: #D53075;
+}
+
+.Profile {
+  max-width: 60%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.Profile__forms form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.Profile__forms label {
+  margin-right: 30px;
+}
+
+.subscribe__cancel {
+  font-size: 18px;
+  padding: 26px 48px;
+  background: transparent;
+  border: 2px solid #FC0404;
+  color: #FFBB0B;
+}
+
+.subscribe__title {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.subscribe__paragraph {
+  margin-bottom: 26px;
+  max-width: 39%;
+}
+.subscribe__variations p {
+  margin-bottom: 30px;
+}
+.subscribe__section {
+  cursor: pointer;
+  font-size: 28px;
+}
+.subscribe__section-active {
+  color: #FE8B8B;
+}
+.subscribe__info {
+  max-width: 54%;
+  background: #2B4376;
+  padding-bottom: 30px;
+}
+.subscribe__info > p {
+  text-align: center;
+  font-size: 30px;
+}
+.subscribe__item {
+  padding: 10px;
+  max-width: 76%;
+  margin: 0 auto;
+  background: #0A365F;
+}
+.subscribe__name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.subscribe__end {
+  color: #C4C4C4;
+  text-align: center;
+}
+.subscribe__cancel {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal {
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal__content {
+  max-width: 40%;
+  margin: 0 auto;
+  background: white;
+  color: black;
+}
+.modal_active {
+  display: block;
+}
+
+.login-form__input input:focus + p {
+  top: -160%;
+}
+.login-form__input .main-input__label_fixed {
+  top: -160%;
+}
+
+.login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+}
+.login-form > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-form__image {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-form__content {
+  max-width: 58%;
+  margin: 0 auto;
+}
+.login-form__input {
+  margin-bottom: 30px;
+}
+.forms {
+  left: 100%;
+  opacity: 0;
+}
+.forms_active {
+  opacity: 1;
+}
+.forms__enter {
+  z-index: 10000;
+  left: 50%;
+  transition: 0.5s left linear;
+}
+.forms__exit {
+  opacity: 0;
+  left: 20%;
+  transition: 0.5s all linear;
+}
+
+.album {
+  margin-bottom: 60px;
+  max-width: 70%;
+  display: flex;
+  align-items: center;
+}
+.album__photo {
+  flex: 1 0 auto;
+}
+.album__name h2 {
+  margin-bottom: 15px;
+}
+.album__name p {
+  max-width: 500px;
+}
+
+.carusel {
+  position: relative;
+  overflow-x: hidden;
+}
+.carusel__slide-btn {
+  z-index: 10000;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 10px;
+  padding: 40px 20px;
+  background: #D9D9D9;
+}
+.carusel__slide-btn_right {
+  right: 0;
+}
+.carusel__slide-btn:disabled {
+  background: gray;
+}
+.carusel__slide-btn:disabled svg {
+  fill: rgb(95, 95, 95);
+}
+.carusel__scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: 0.5s transform linear;
+}
+.carusel__item {
+  min-width: 629px;
+}
+
+.bage {
+  border-radius: 10px;
+  padding: 6px 20px;
+  display: inline-block;
+  background: #D53075;
+}
+.bage_PRO {
+  background: #312670;
+  color: #6DEFA9;
+}
+.bage_ELITE {
+  background: #CAFFF5;
+  color: black;
+}
+
+.standart-carusel {
+  margin-bottom: 60px;
+  margin-right: 100px;
+  min-width: 380px;
+}
+.standart-carusel__photo {
+  cursor: pointer;
+  max-width: 380px;
+  max-height: 280px;
+  height: 100%;
+}
+.standart-carusel__photo:hover {
+  transform: scale(1.1);
+  transition: 0.1s all linear;
+}
+.standart-carusel__photo:hover + div {
+  transform: scale(1.1);
+  transform: translateY(30%);
+}
+.standart-carusel__photo img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.standart-carusel__film-info {
+  text-align: center;
+}
+.main-carusel {
+  margin-bottom: 60px;
+  margin-right: 100px;
+}
+.main-carusel__photo {
+  cursor: pointer;
+  max-height: 380px;
+  height: 100%;
+}
+.main-carusel__photo:hover {
+  transform: scale(1.1);
+  transition: 0.1s all linear;
+}
+.main-carusel__photo:hover + div {
+  transform: scale(1.1);
+  transform: translateY(30%);
+}
+.main-carusel__photo img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.main-carusel__film-info {
+  text-align: center;
+}
+.offer {
+  margin-bottom: 60px;
+  background: #D53075;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.offer__content {
+  font-size: 28px;
+  max-width: 80%;
+}
+.offer__link {
+  margin-right: 30px;
+  background: red;
+  font-size: 24px;
+  background: #774EEB;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.offer__link:hover {
+  background: white;
+  color: black;
+}
+
+.film-player {
+  z-index: 10;
+  position: relative;
+  min-height: 80vh;
+}
+.film-player__main-info {
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+  width: 56%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1001;
+}
+.film-player__header {
+  background: transparent;
+  width: 100%;
+  z-index: 10000;
+  max-height: 80vh;
+}
+.film-player__header .film-player__background {
+  position: absolute;
+  height: 100%;
+  z-index: 1000;
+  width: 100%;
+}
+.film-player__header .film-player__background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.film-player__header .film-player__background::after {
+  content: "";
+  top: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90.41deg, rgba(0, 0, 0, 0) 0.09%, rgba(0, 0, 0, 0.525417) 28.88%, rgba(0, 0, 0, 0.679) 43.78%, rgba(0, 0, 0, 0.590981) 56.69%, rgba(0, 0, 0, 0) 95.41%), url(image.png);
+}
+.film-player__background img {
+  width: 100%;
+}
+.film-player__rating {
+  margin-bottom: 16px;
+}
+.film-player__rating::before {
+  content: "";
+  margin-top: 20px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0px;
+  margin-bottom: -3px;
+  background: url("../../Films/images/rating.svg") no-repeat;
+  background-position: 0 0px;
+  background-size: 24px;
+}
+.film-player .bage {
+  margin-bottom: 60px;
+}
+.film-player__name {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.film-player__date {
+  color: #C4C4C4;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
+.film-player__start-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.film-player__video {
+  position: relative;
+  z-index: 100;
+}
+.film-player__video video {
+  width: 100%;
+  height: 70vh;
+}
+.film-player__video:hover .PANEL {
+  opacity: 1;
+}
+.film-player__progress-bar {
+  width: 100%;
+}
+.film-player__progress-bar input {
+  width: 100%;
+}
+.film-player__panel {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.film-player__panel button {
+  cursor: pointer;
+}
+.film-player_full {
+  background: rgb(87, 87, 87);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 16%;
+  left: 0;
+}
+.film-player_full video {
+  height: 100%;
+  width: 100%;
+}
+
+.PANEL {
+  opacity: 0;
+  padding-top: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.PANEL .film-player__progress-bar {
+  width: 100%;
+  background: transparent;
+}
+.PANEL input {
+  width: 100%;
+  height: 20px;
+  background: red;
+}
+
+.film-player_full .PANEL {
+  position: fixed;
+  bottom: 0;
+}
+
+.about__paragraph {
+  margin-bottom: 26px;
+  max-width: 60%;
+  padding-left: 10px;
+}
+.about__toggle {
+  padding-left: 10px;
+}
+
+.expand {
+  color: #C4C4C4;
+}
+.expand::after {
+  content: "";
+  margin-left: 6px;
+  margin-bottom: -4px;
+  display: inline-block;
+  background: url("../../Films/images/shevron.svg") no-repeat;
+  background-size: 20px;
+  transform: rotate(180deg);
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s linear;
+}
+.expand_collapse::after {
+  transform: rotate(0deg);
+  transition: transform 0.2s linear;
+}
+
+.review__stars {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  transform: rotate(180deg);
+}
+.review__star-item {
+  transform: rotate(180deg);
+  cursor: pointer;
+  width: 48px;
+  height: 44px;
+  fill: #787878;
+}
+.review__star-item_active {
+  fill: #FFE600;
+}
+.review__star-item:hover ~ .review__star-item, .review__star-item .review__star-item, .review__star-item:hover {
+  fill: #FFE600;
+}
+.review__submit {
+  display: block;
+  margin-top: 30px;
+}
+
+.recommends {
+  margin-top: 60px;
+}
+
+.found-list {
+  padding: 20px;
+  display: flex;
+  width: calc(100% + 50px);
+  flex-wrap: wrap;
+  margin: 0 -25px;
+}
+.found-list__item {
+  position: relative;
+  margin: 0 25px;
+  width: calc(33.3333333333% - 50px);
+}
+
+.film-item {
+  min-height: 300px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.film-item__background {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.film-item__background img {
+  width: 100%;
+}
+.film-item__background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: 10;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.film-item__hover {
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  top: 10%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.film-item:hover > .film-item__hover {
+  opacity: 1;
+}
+.subscribe-title {
+  font-size: 24px;
+  color: #FE8B8B;
+}
+
+.subscribe-list {
+  display: flex;
+  justify-content: space-between;
+}
+.subscribe-list__item {
+  min-height: 300px;
+  width: 30%;
+  background: white;
+  background: url("../images/musicSubscribeBg.png") no-repeat;
+}
+
+.item-subscribe {
+  padding-bottom: 30px;
+}
+.item-subscribe__wrapper {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+.item-subscribe__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  max-width: 70%;
+  margin-left: 10%;
+  height: 100%;
+}
+.item-subscribe__title {
+  text-align: center;
+  margin-bottom: 37px;
+}
+.item-subscribe__benefits-list {
+  display: inline-block;
+  position: relative;
+  flex: 1 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.item-subscribe__benefits-list li {
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+.item-subscribe__benefits-list li:last-child {
+  margin-bottom: 60px;
+}
+.item-subscribe__benefits-list li::before {
+  content: "";
+  margin-bottom: 0;
+  flex: 1 0 auto;
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  background: red;
+  background: url("../images/benefit.svg") no-repeat;
+  background-size: 18px;
+  background-position: 0px 0px;
+}
+.item-subscribe__price-block {
+  text-align: center;
+}
+.item-subscribe__btn-buy {
+  top: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.form-container {
+  padding: 20px 10px;
+  background: rgb(47, 47, 82);
+  max-width: 50%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.form-container h2 {
+  text-align: center;
+}
+.form-container form {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.form-container form input {
+  width: 100%;
+}
+.form-container form label {
+  display: block;
+}
+.form-container form label input:focus + p, .form-container form label .main-input__label_fixed {
+  top: -50%;
+}
+
+/*# sourceMappingURL=main.css.map */

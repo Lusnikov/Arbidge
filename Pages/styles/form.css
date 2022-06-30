@@ -1,0 +1,18 @@
+.form{
+   width: 600px;
+    margin: 0 auto;
+    background: rgb(71, 71, 119);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.form>.main-input{
+   display: block;
+   margin-bottom: 30px;
+}
+
+body{
+    text-align: center;
+}

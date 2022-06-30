@@ -1,0 +1,240 @@
+
+$secondaryColor:#ae3fbd;
+
+// УБРАТЬ
+
+//
+
+.hace:checked+.hace-content::before{
+    content: "";
+    width: 56px;
+    height: 56px;
+    background-image: url('../../../Images/Layer_7_copy.svg');
+}
+
+.hace{
+    display: none;
+}
+
+.hace-content{
+    cursor: pointer;
+}
+
+.hace-content::before{
+    content: "";
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    display: block;
+    // background-color: red; 
+    background-image: url('../../../Images/Group.svg');
+ 
+}
+
+
+.pleer{
+    z-index: 999;
+    position: fixed;
+    background: white;
+    bottom: 0;
+    width: 100%;
+
+
+    &_song-name{
+        color: black;
+    }
+    &__video{
+        display: none;
+        position: absolute;
+        top:0;
+        max-width: 100%;
+    }
+    &__open-full-screen{
+        cursor: pointer;
+    }
+    &_panel-start {
+        padding: 0 16px;
+    }
+    &_like-btn{
+        cursor: pointer;
+        margin-right: 18px;
+        & div{
+            display: inline-block;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        &>input:checked+div::after{
+            background-image: url('../../../Images/active-heart.svg') ;
+        }
+
+       
+      
+        &>div::after{
+            content: "";  
+            display: inline-block;
+            width: 35px;
+            height: 32px;
+            background-image: url('../../../Images/heart.svg') ;
+        }
+       
+    }
+    &_song-name {
+        font-size: 24px;
+    }
+
+    &__author-info{
+        flex: 1 0 auto;
+        margin-right: 18px;
+        padding-right: 20px;
+    }
+
+    &_song-author {
+        font-size: 18px;
+        color: $secondaryColor
+      
+    }
+
+    &__progress-bar {
+        cursor: pointer;
+        margin-bottom: 10px;
+        position: relative;
+        height: 24px;
+        background: #7D7D7D;
+        & p{
+           opacity: 0;
+            color: white;
+            position: relative;
+            left: 14px;
+            z-index: 999;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        
+    }
+
+    &__progress-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $secondaryColor;
+        width: 30%;
+        height: 100%;
+    }
+
+    &__content {
+        padding:0 60px 0  60px;
+        margin-bottom: 16px;
+        max-height: 128px;
+        display: flex;
+    }
+
+    &__control-panel {
+        margin-right: 26px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__control-direction {
+    }
+
+    &__song-info {
+        display: flex;
+    }
+
+    &__song-photo img{
+        margin: 0 18px 0 0;
+        max-width: 85px;
+        min-height: 90px;
+        border-radius: 10px;
+    }
+
+    &__song-info{
+        display: flex;
+        align-items: center;
+    }
+
+    
+}
+
+.pleer__full{
+    position: relative;
+
+    & .pleer__wrapper{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        height: 100vh;   
+    }
+    & .pleer__contenter{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+        max-width: 797px;
+        background: white;
+        margin: 0 auto;
+    }
+    & .pleer__song-photo{
+        display: none;
+        z-index: 300;
+    }
+
+    & .pleer__open-full-screen{
+        display: none;
+    }
+
+    & .pleer__progress-bar{
+
+        position: absolute;
+        width: 100%;
+        bottom: -10px;
+        left: 50%;
+        transform:  translateX(-50%);
+
+    }
+
+    &  .pleer__video{
+        display: block;
+        position: fixed;
+        top: 0;
+    }
+    
+    & .pleer__content{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-radius: 10px;
+        background: white;
+        position: absolute;
+        bottom:30px;
+        left: 50%;
+        transform:  translateX(-50%);
+        max-width:  731px;
+     
+    }
+
+    & .pleer__hidden-album{
+        height: 100%;
+        img{
+          object-fit: cover;
+          width: 100%;
+          max-height: 60vh;
+        }
+    }
+}
+
+.hace {
+}
+.hace-content {
+}
+
+.af{
+    flex: 1 0 auto;
+}
+
+main{
+   padding-bottom: 160px;
+}

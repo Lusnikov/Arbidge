@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/pleer.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header class="header ">
+        <div class="header__content">
+            <div class="header__logo">
+                <a href="">
+                    <img src="../../Images/Arbidgemusic.png" alt="">
+                </a>
+            </div>
+                <ul class="header__nav">
+                    <li class="header__form hidden">
+                        <form action="./foundFilm.html">
+                            <div class="header__form-control">
+                                <button>
+                                    <img src="../../Images/Found.svg" alt="" width="24px">
+                                </button>
+                                <input name="film-name" class="header__found-input" type="text">
+                                <button type="button" class="header__close-found-input">x</button>
+                            </div>  
+                        </form>
+                    </li>
+                    <li class="header__nav-element"><a class="" href="#">Подписки</a></li>
+                    <li class="header__nav-element" ><a href="#">Список фильмов</a></li>
+                      
+                </ul>
+              
+                <div class="header__profile">
+                    <button class="header__found">
+                        <img src="../../Images/Found.svg" alt="">
+                    </button>
+
+                    <button class="login-form__open-forms">Войти</button>
+                   
+                    <a href="../Profile.html" class="header__profile-s">
+                        <div class="header__avatar">
+                            <img src="../../Images/Avatar.svg" alt="">
+                        </div>
+                        <div class="header__user-name">
+                            Sam Smith
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        
+    </header>
+ 
+    <div class="modal auth__modal">
+        <form class="forms  modal__content login-form">
+            <h2>Вход личный кабинет</h2>
+            <div class="login-form__image">
+                <img src="../../Images/account_avatar_people_profile_user_icon_123297 2.svg" alt="">
+            </div>
+            <div class="login-form__content">
+                <div class="login-form__input">
+                    <label class="main-input main-input_dark login-form__input" for="">
+                        <input name="login"  type="text" class="main-input__input main-input__label-fixed">
+                        <p class="main-input__label ">Логин</p>
+                    </label>
+                </div>
+                <div class="login-form__input">         
+                    <label class="main-input main-input_dark login-form__input" for="">
+                        <input name="login"  type="text" class="main-input__input main-input__label-fixed">
+                        <p class="main-input__label ">Пароль</p>
+                    </label>
+                </div>
+                <button class="">
+                    Войти
+                </button>
+                <a class="login-form__forgot" href="">Забыли пароль?</a>
+                <button class="login-form__toReg">К регистрации</button>
+              
+            </div>
+        </form>
+        <form class="forms   modal__content registration-form">
+            <h2>Регистрация</h2>
+            <div class="login-form__image">
+                <img src="../../Images/account_avatar_people_profile_user_icon_123297 2.svg" alt="">
+            </div>
+            <div class="login-form__content">
+                <div class="login-form__input">
+                    <label class="main-input main-input_dark login-form__input" for="">
+                        <input name="login"  type="text" class="main-input__input main-input__label-fixed">
+                        <p class="main-input__label ">Логин</p>
+                    </label>
+                </div>
+                <div class="login-form__input">         
+                    <label class="main-input main-input_dark login-form__input" for="">
+                        <input name="login"  type="text" class="main-input__input main-input__label-fixed">
+                        <p class="main-input__label ">Пароль</p>
+                    </label>
+                </div>
+                <button class="login-form__sumbit">
+                    Войти
+                </button>
+                <a class="login-form__forgot" href="">Забыли пароль?</a>
+                <button class="login-form__toReg">К регистрации</button>
+              
+            </div>
+        </form>
+    </div>
+    
+    <main>
+        <section class="main" style="overflow: hidden;">
+           <h2 class="title Container" style="padding: 10px; ">Результаты поиска</h2>    
+           
+           <div class="found-list">
+               <div class="found-list__item film-item">
+                    <div class="film-item__background">
+                        <img src="./images/SHELLY.png" alt="">
+                    </div>
+                    <div class="film-item__hover">
+                        <h2 class="h2">Название</h2>
+                        <p class="film-item__year">2020</p>
+                        <a href="./ChoosenFIlm.html?film-id">Смотреть фильм</a>
+                    </div>
+               </div>
+               <div class="found-list__item film-item">
+                <div class="film-item__background">
+                    <img src="./images/SHELLY.png" alt="">
+                </div>
+                <div class="film-item__hover">
+                    <h2 class="h2">Название</h2>
+                    <p class="film-item__year">2020</p>
+                    <a href="./ChoosenFIlm.html?film-id">Смотреть фильм</a>
+                </div>
+               </div>
+               <div class="found-list__item film-item">
+                <div class="film-item__background">
+                    <img src="./images/SHELLY.png" alt="">
+                </div>
+                <div class="film-item__hover">
+                    <h2 class="h2">Название</h2>
+                    <p class="film-item__year">2020</p>
+                    <a href="./ChoosenFIlm.html?film-id">Смотреть фильм</a>
+                </div>
+               </div>
+              
+        </section>
+    </main>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/videoPlayer.js"></script>
+    <script src="./scripts/Input.js"></script>
+    <script src="./scripts/forms.js"></script>
+    <script src="./scripts/filmShevron.js"></script>
+    <script src="./scripts/rating.js"></script>
+    <script src="./scripts/slider.js"></script>
+</body>
+</html>
